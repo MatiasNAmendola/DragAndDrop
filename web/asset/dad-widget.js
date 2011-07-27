@@ -22,6 +22,10 @@ $.widget('balloon.dad',
         $expand.find('#delete').click(this.delete);
     },
 
+    _getPoll: function(poll_id)
+    {
+        return $element.children('#poll_'+poll_id);
+    },
 
     /**
      * --------------------------------
@@ -35,7 +39,7 @@ $.widget('balloon.dad',
 
         // bind data to DOM elements
         for(i in data) {
-            $element.children('#poll_'+data[i].id).data('poll', data[i]);
+            this._getPoll(data[i].id).data('poll', data[i]);
         }
     },
 
@@ -66,8 +70,9 @@ $.widget('balloon.dad',
         var data = { 'order': { 'from': self.domMovingIndex - 1, 'to': ui.item.index() - 1 } };
 
         // send ajax request to update order
-        $.post(self.options.update_url+'/'+ui.item.data('poll').id, data, function(poll) {
-            $element.children('#poll_'+poll.id).data('poll', poll);
+        var url = self.options.update_url+'/'+ui.item.data('poll').id;
+        $.post(url, data, function(poll) {
+            self._getPoll(poll.id).data('poll', poll);
         });
     },
 
@@ -144,7 +149,7 @@ $.widget('balloon.dad',
             isNew && $element.append($('<div/>').attr('id', 'poll_'+poll.id).attr('class', 'poll'));
 
             // update view data
-            $element.children('#poll_'+poll.id)
+            self._getPoll(poll.id)
                 .data('poll', poll)
                 .text(poll.name);
         }, 'json');
