@@ -1,0 +1,147 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #EAEAEA;
+}
+
+header {
+    text-align: center;
+    width: 600px;
+    margin: 20px auto;
+}
+
+header h1 a {
+    vertical-align: middle;
+    margin-left: 20px;
+}
+
+section {
+    width: 600px;
+    margin: 20px auto;
+    padding: 10px 0;
+    background-color: #F3F3F3;
+    border: 1px solid #F9F9F9;
+    overflow: hidden;
+}
+
+section > div {
+    float: left;
+    text-align: center;
+    margin: 10px 19px; /* -1px for the border */
+    padding: 40px 5px;
+    width: 150px;
+    height: 60px;
+    border: 1px solid #EEE;
+    background-color: #ECD078;
+    -moz-border-radius: 0 30px 0 30px;
+    -webkit-border-radius: 0 30px 0 30px;
+    border-radius: 0 30px 0 30px;
+    cursor: pointer;
+}
+
+section div.ghost {
+    border: 4px dotted #000;
+    width: 144px;
+    height: 54px;
+    background-color: #FFFEF0;
+}
+
+form {
+    display: none;
+    clear: both;
+    padding: 0 0 10px 0;
+    overflow: hidden;
+}
+
+form .poll-select div {
+    margin: 0 20px 10px 20px;
+    background: url('tri.gif') no-repeat;
+}
+
+fieldset {
+    background-color: #F9F9F9;
+    border: 1px solid #C6C6C6;
+    width: 240px;
+    height: 140px;
+    margin: 0 0 0 10px;
+    padding: 12px 20px;
+    float: left;
+}
+
+label {
+    display: block;
+    font-size: 1em;
+    margin-bottom: 0.2em;
+    margin-left: 0.1em;
+    color: #999;
+}
+
+.poll_choices label {
+    display: inline;
+}
+
+.poll_choices input {
+    width: 55%;
+    margin-left: 20px;
+}
+
+input, textarea {
+    width: 96%;
+    padding: 3px;
+    border: solid 1px #E5E5E5;
+    outline: 0;
+    font: normal 13px/100% Verdana, Tahoma, sans-serif;
+    background: white url('bg_form.png') left top repeat-x;
+    background: -webkit-gradient(linear, left top, left 25, from(white), color-stop(4%, #EEE), to(white));
+    background: -moz-linear-gradient(top, white, #EEE 1px, white 25px);
+}
+
+input[type='checkbox'] {
+    width: 15px;
+    margin-top: 20px;
+}
+
+input[type='checkbox'] + label {
+    display: inline;
+}
+
+.dialog {
+    background-color: #EAEAEA;
+    display: block;
+    padding: 20px;
+    margin: 160px 130px;
+    position: absolute;
+    top: 60px;
+    z-index: 99999;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    border: 1px solid #444;
+    text-align: center;
+    width: 400px;
+}
+
+.buttons {
+    margin-top: 25px;
+}
+
+.button {
+    color: #6E6E6E;
+    font: bold 12px Helvetica, Arial, sans-serif;
+    text-decoration: none;
+    padding: 7px 12px;
+    position: relative;
+    display: inline-block;
+    text-shadow: 0 1px 0 white;
+    -webkit-transition: border-color .218s;
+    -moz-transition: border .218s;
+    -o-transition: border-color .218s;
+    transition: border-color .218s;
+    background: #F3F3F3;
+    background: -webkit-gradient(linear,0% 40%,0% 70%,from(whiteSmoke),to(#F1F1F1));
+    background: -moz-linear-gradient(linear,0% 40%,0% 70%,from(whiteSmoke),to(#F1F1F1));
+    border: solid 1px gainsboro;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    margin-right: 10px;
+}
