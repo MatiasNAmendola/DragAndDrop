@@ -95,9 +95,20 @@ $.widget('balloon.dad',
         // index of clicked element
         var elementPos = $(this).index('section > div') + 1;
 
+        // element index inside current row
+        var rangIndex = (elementPos > self.options.rowSize)
+            ? elementPos - ((Math.ceil(elementPos / self.options.rowSize) - 1) * self.options.rowSize)
+            : elementPos;
+
         // calculate if $expand is visible or not
         var isVisible = !$expand.is(':visible') || (undefined !== self.currentPoll && poll !== self.currentPoll);
         self.currentPoll = poll;
+
+        // move cursor
+        var oldDisplay = $select.filter('div').is(':visible');
+        var partWidth = $element.width() / self.options.rowSize;
+        var cursorLeft =  partWidth * rangIndex - (partWidth / 2) - 37;
+        $select.filter('div').animate({'margin-left': cursorLeft}, oldDisplay ? 300 : 0);
 
         // we insert expand in the DOM
         var expandPos = Math.ceil(elementPos / self.options.rowSize) * self.options.rowSize - 1;
@@ -105,16 +116,6 @@ $.widget('balloon.dad',
         $expand[isVisible ? 'slideDown' : 'slideUp']().insertAfter(
             $switchElement.length == 0 ? $element.children('div:last') : $switchElement
         );
-
-        // element index inside current row
-        var rangIndex = (elementPos > self.options.rowSize)
-            ? elementPos - ((Math.ceil(elementPos / self.options.rowSize) - 1) * self.options.rowSize)
-            : elementPos;
-
-        // move cursor
-        var partWidth = $element.width() / self.options.rowSize;
-        var cursorLeft =  partWidth * rangIndex - (partWidth / 2) - 37;
-        $select.filter('div').animate({'margin-left': cursorLeft}, 300);
     },
 
 
