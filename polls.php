@@ -3,56 +3,56 @@
 return array(
     array(
         'id' => 1,
-        'name' => 'Et ta mère?',
+        'name' => 'Poll 1',
         'order' => 0,
         'visible' => true,
-        'choices' => array('Quoi ma mère', 'Ben ouais ma mère et alors')
+        'choices' => array('choice 1', 'choice 2')
     ),
     array(
         'id' => 2,
-        'name' => 'Quoi ta mère?',
+        'name' => 'Poll 2',
         'order' => 3,
         'visible' => false,
         'choices' => array('Choice 1', 'choice 2', 'Choice 3', 'choice 4')
     ),
     array(
         'id' => 3,
-        'name' => 'Mommy',
+        'name' => 'Poll 3',
         'order' => 1,
         'visible' => true,
-        'choices' => array('Quoi ma mère', 'Ben ouais ma mère et alors')
+        'choices' => array('Choice 1', 'Choice 2')
     ),
     array(
         'id' => 0,
-        'name' => 'On the beach, biatch',
+        'name' => 'Poll 4',
         'order' => 2,
         'visible' => false,
         'choices' => array('Choice 1', 'choice 2', 'Choice 3', 'choice 4')
     ),
     array(
         'id' => 6,
-        'name' => 'HipHop',
+        'name' => 'Poll 5',
         'order' => 6,
         'visible' => false,
-        'choices' => array('Choice 1', 'choice 2', 'Choice 3', 'choice 4')
+        'choices' => array('Choice 1', 'choice 2', 'Choice 3')
     ),
     array(
         'id' => 7,
-        'name' => 'I\'m a criminal!',
+        'name' => 'Poll 6',
         'order' => 7,
         'visible' => false,
         'choices' => array('Choice 1', 'choice 2', 'Choice 3', 'choice 4')
     ),
     array(
         'id' => 4,
-        'name' => 'Hooooooola',
+        'name' => 'Poll 7',
         'order' => 4,
         'visible' => false,
-        'choices' => array('Choice 1', 'choice 2', 'Choice 3', 'choice 4')
+        'choices' => array('Choice 1', 'choice 2', 'Choice 3', 'choice 4', 'choice 5')
     ),
     array(
         'id' => 5,
-        'name' => 'Et bim!',
+        'name' => 'Poll 8',
         'order' => 5,
         'visible' => false,
         'choices' => array('Choice 1', 'choice 2', 'Choice 3', 'choice 4')
