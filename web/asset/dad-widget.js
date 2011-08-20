@@ -147,7 +147,9 @@ $.widget('balloon.dad',
             $expand.hide();
 
             // create the new element
-            isNew && $element.append($('<div/>').attr('id', 'poll_'+poll.id).attr('class', 'poll'));
+            isNew && $element.append($('<div/>')
+                .attr('id', 'poll_'+poll.id)
+                .attr('class', 'poll'));
 
             // update view data
             self._getPoll(poll.id)
