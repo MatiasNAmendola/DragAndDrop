@@ -1,7 +1,7 @@
 <?php
 
-require __DIR__.'/../Sminny/src/application.php';
-require __DIR__.'/../Sminny/src/templating.php';
+require __DIR__.'/../framework/application.php';
+require __DIR__.'/../framework/templating.php';
 
 
 // as we store polls in the session, we start the session
